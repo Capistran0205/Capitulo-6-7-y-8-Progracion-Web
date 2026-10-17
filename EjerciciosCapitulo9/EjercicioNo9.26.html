@@ -37,7 +37,7 @@
             var mensaje = document.getElementById("mensaje");
 
             if (isNaN(intento) || intento < 1 || intento > 100) {
-                mensaje.innerHTML = "Escriba un entero entre 1 y 1000.";
+                mensaje.innerHTML = "Escriba un entero entre 1 y 100.";
                 return; // un intento no válido no cuenta
             } // fin de if
 
@@ -74,7 +74,7 @@
 
 <body>
    <form action="#">
-      <p>Adivine un n&uacute;mero entre 1 y 1000:
+      <p>Adivine un n&uacute;mero entre 1 y 100:
          <input id="campoIntento" type="number">
          <input id="botonAdivinar" type="button" value="Adivinar"></p>
    </form>
