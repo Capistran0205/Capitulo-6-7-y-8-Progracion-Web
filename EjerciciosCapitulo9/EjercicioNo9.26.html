@@ -13,7 +13,7 @@
         document.writeln("<hr>");
         document.writeln("<p>modifica el 9.25 para contar los intentos. Si el jugador necesita menos de 10, muestra"+
             " \"¡Conoce el secreto o tuvo suerte!\"; si necesita exactamente 10, \"¡Entonces sí conoce el secreto!\";"+
-            "si necesita más de 10, \"¡Debería poder hacerlo mejor!\". Explica por qué es posible adivinar cualquier número del 1 al 1000 en 10 intentos o menos.</p>.",
+            "si necesita más de 10, \"¡Debería poder hacerlo mejor!\". Explica por qué es posible adivinar cualquier número del 1 al 100 en 10 intentos o menos.</p>",
         );
         document.writeln("<hr>");
         document.writeln("<h2>Solución:</h2>");
@@ -27,7 +27,7 @@
         } // fin de la función iniciar
 
         function nuevoJuego() {
-            numeroSecreto = Math.floor(1 + Math.random() * 1000);
+            numeroSecreto = Math.floor(1 + Math.random() * 100);
             intentos = 0;
         } // fin de la función nuevoJuego
 
@@ -36,7 +36,7 @@
             var intento = parseInt(campo.value);
             var mensaje = document.getElementById("mensaje");
 
-            if (isNaN(intento) || intento < 1 || intento > 1000) {
+            if (isNaN(intento) || intento < 1 || intento > 100) {
                 mensaje.innerHTML = "Escriba un entero entre 1 y 1000.";
                 return; // un intento no válido no cuenta
             } // fin de if
